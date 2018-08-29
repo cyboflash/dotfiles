@@ -30,6 +30,7 @@ Plugin 'kana/vim-textobj-line.git'
 Plugin 'edkolev/tmuxline.vim.git'
 Plugin 'jeaye/color_coded.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
+Plugin 'itchyny/vim-gitbranch.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -89,6 +90,17 @@ nnoremap <silent><leader>mm :set lines=10000 columns=1000<cr>
 nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 
 " ================ Plugin Configuraiton  ====================
+
+" -------------- lightline  -----------------
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 " -------------- indentLine  -----------------
 let g:indentLine_char = '|'

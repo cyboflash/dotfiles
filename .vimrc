@@ -27,6 +27,9 @@ Plugin 'vim-scripts/xoria256.vim.git'
 Plugin 'itchyny/lightline.vim.git'
 Plugin 'kana/vim-textobj-user.git'
 Plugin 'kana/vim-textobj-line.git'
+Plugin 'edkolev/tmuxline.vim.git'
+Plugin 'jeaye/color_coded.git'
+Plugin 'christoomey/vim-tmux-navigator.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,12 +60,6 @@ hi clear CursorLine
 hi CursorLine gui=underline cterm=underline
 
 
-" ================ Mappings ==================
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-
 nnoremap <leader>l :set list!<cr>
 
 nnoremap <silent><F8> :nohlsearch<cr>
@@ -80,6 +77,7 @@ nnoremap <leader>ft :CtrlPTag<cr>
 
 nnoremap <silent><leader>sv :source ~/.vimrc<cr>
 nnoremap <silent><leader>ev :edit ~/.vimrc<cr>
+nnoremap <silent><leader>et :edit ~/.tmux.conf<cr>
 
 nnoremap <silent><F9>       :cprev<cr>zz
 nnoremap <silent><F10>      :cnext<cr>zz

@@ -10,5 +10,4 @@ fi
 
 # User specific aliases and functions
 export PATH=~/myfs/bin:$PATH
-# export PS1="${PS1::-3}\n$ "
 export PS1="[\u@\h \W]\n\$ "

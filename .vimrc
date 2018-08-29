@@ -90,6 +90,9 @@ nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 
 " ================ Plugin Configuraiton  ====================
 
+" -------------- indentLine  -----------------
+let g:indentLine_char = '|'
+
 " -------------- tagbar  -----------------
 let g:tagbar_autoclose   = 1
 let g:tagbar_autofocus   = 1

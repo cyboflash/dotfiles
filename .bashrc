@@ -9,5 +9,9 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PATH=~/myfs/bin:$PATH
+export PATH=~/myfs/opt/Postman/app:~/myfs/bin:$PATH
 export PS1="[\u@\h \W]\n\$ "
+
+if [ -f ~/.bashrc_private ]; then
+	. ~/.bashrc_private
+fi

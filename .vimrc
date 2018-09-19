@@ -31,6 +31,9 @@ Plugin 'edkolev/tmuxline.vim.git'
 Plugin 'jeaye/color_coded.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'itchyny/vim-gitbranch.git'
+Plugin 'tpope/vim-vinegar.git'
+" Plugin 'w0rp/ale.git'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +47,7 @@ colorscheme xoria256
 " Highlight the search pattern.
 let mapleader="\<Space>"
 
+set directory=/tmp
 set history=1000
 set hlsearch
 set incsearch
@@ -91,26 +95,47 @@ nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 
 " ================ Plugin Configuraiton  ====================
 
+" -------------- YouCompleteMe  -----------------
+let g:ycm_always_populate_location_list            = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_error_symbol                             = 'E'
+let g:ycm_warning_symbol                           = 'W'
+
 " -------------- lightline  -----------------
+
+" display the plugin name at the mode component?
+function! LightlineMode()
+  return expand('%:t') ==# '__Tagbar__' ? 'Tagbar':
+        \ expand('%:t') ==# 'ControlP' ? 'CtrlP' :
+        \ &filetype ==# 'unite' ? 'Unite' :
+        \ &filetype ==# 'vimfiler' ? 'VimFiler' :
+        \ &filetype ==# 'vimshell' ? 'VimShell' :
+        \ lightline#mode()
+endfunction
+
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
+      \   'gitbranch': 'gitbranch#name',
+      \   'mode': 'LightlineMode',
       \ },
       \ }
 
-" -------------- indentLine  -----------------
+
+
+" -------------- indentLine -----------------
 let g:indentLine_char = '|'
 
-" -------------- tagbar  -----------------
-let g:tagbar_autoclose   = 1
-let g:tagbar_autofocus   = 1
-let g:tagbar_sort        = 1
-let g:tagbar_autoshowtag = 1
-let g:tagbar_foldlevel   = 99
+" -------------- tagbar -----------------
+let g:tagbar_autoclose        = 1
+let g:tagbar_autofocus        = 1
+let g:tagbar_sort             = 1
+let g:tagbar_autoshowtag      = 1
+let g:tagbar_foldlevel        = 99
+let g:tagbar_show_linenumbers = -1
 
-" -------------- Ack  -----------------
+" -------------- Ack -----------------
 let g:ackprg = 'ag --nogroup --nocolor --column'

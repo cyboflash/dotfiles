@@ -57,6 +57,7 @@ set showbreak=…
 set linebreak
 set listchars=tab:►-,eol:¬,trail:●
 set relativenumber
+set number
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 retab
 " Underline current cursor line

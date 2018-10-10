@@ -13,7 +13,7 @@ export PATH=~/myfs/opt/Postman/app:~/myfs/bin:$PATH
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-export PS1="\e[35m[\[$txtylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]\e[35m]\[$txtrst\] \W\\n\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\[$txtylw\]\u\[$txtrst\]\[$bldwht\]@\[$txtrst\]\[$txtgrn\]\h\[$txtrst\]\[$txtrst\] \W\\n\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 
 if [ -f ~/.bashrc_private ]; then

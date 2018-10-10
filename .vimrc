@@ -99,8 +99,9 @@ nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 " -------------- YouCompleteMe  -----------------
 let g:ycm_always_populate_location_list            = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_error_symbol                             = 'E'
-let g:ycm_warning_symbol                           = 'W'
+let g:ycm_error_symbol                             = 'E>'
+let g:ycm_warning_symbol                           = 'W>'
+let g:ycm_confirm_extra_conf                       = 0
 
 " -------------- lightline  -----------------
 

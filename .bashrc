@@ -9,7 +9,8 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PATH=~/myfs/opt/Postman/app:~/myfs/bin:$PATH
+export MINICOM="-m -w -s -c on"
+export PATH=~/myfs/opt/ocarina/bin:~/myfs/bin:$PATH
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 

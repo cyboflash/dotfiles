@@ -30,8 +30,8 @@ Plugin 'kana/vim-textobj-line.git'
 Plugin 'edkolev/tmuxline.vim.git'
 Plugin 'jeaye/color_coded.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
-Plugin 'itchyny/vim-gitbranch.git'
 Plugin 'tpope/vim-vinegar.git'
+Plugin 'vim-scripts/Conque-GDB.git'
 " Plugin 'w0rp/ale.git'
 
 
@@ -121,7 +121,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name',
+      \   'gitbranch': 'fugitive#head',
       \   'mode': 'LightlineMode',
       \ },
       \ }

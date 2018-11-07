@@ -60,10 +60,14 @@ set relativenumber
 set number
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 retab
+
 " Underline current cursor line
 set cursorline
-hi clear CursorLine
-hi CursorLine gui=underline cterm=underline
+augroup CustomCursorLine
+    au!    
+    au ColorScheme * :hi clear CursorLine
+    au ColorScheme * :hi! CursorLine gui=underline cterm=underline
+augroup END
 
 
 nnoremap <leader>l :set list!<cr>

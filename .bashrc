@@ -10,7 +10,11 @@ fi
 
 # User specific aliases and functions
 export MINICOM="-m -w -s -c on"
-export PATH=~/myfs/opt/ocarina/bin:~/myfs/bin:$PATH:~/myfs/opt/vim/bin
+PATH=~/myfs/bin:$PATH
+PATH=~/myfs/opt/ocarina/bin:$PATH
+PATH=~/myfs/opt/vim/bin:$PATH
+PATH=~/myfs/opt/Xilinx/SDK/2017.4/bin:$PATH
+export PATH
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 

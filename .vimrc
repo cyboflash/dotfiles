@@ -88,6 +88,7 @@ nnoremap <leader>ft :CtrlPTag<cr>
 nnoremap <silent><leader>sv :source ~/.vimrc<cr>
 nnoremap <silent><leader>ev :edit ~/.vimrc<cr>
 nnoremap <silent><leader>et :edit ~/.tmux.conf<cr>
+nnoremap <silent><leader>eb :edit ~/.bashrc<cr>
 
 nnoremap <silent><F9>       :cprev<cr>zz
 nnoremap <silent><F10>      :cnext<cr>zz

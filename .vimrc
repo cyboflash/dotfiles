@@ -47,6 +47,7 @@ colorscheme xoria256
 " Highlight the search pattern.
 let mapleader="\<Space>"
 
+set hidden
 set directory=/tmp
 set history=1000
 set hlsearch

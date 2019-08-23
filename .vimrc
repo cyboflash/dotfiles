@@ -32,6 +32,13 @@ Plugin 'jeaye/color_coded.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'tpope/vim-vinegar.git'
 Plugin 'vim-scripts/Conque-GDB.git'
+Plugin 'suan/vim-instant-markdown.git'
+Plugin 'panozzaj/vim-autocorrect'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
+Plugin 'rafi/awesome-vim-colorschemes'
+" Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'skywind3000/gutentags_plus'
 " Plugin 'w0rp/ale.git'
 
 
@@ -40,6 +47,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme xoria256
+" colorscheme zellner
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -101,6 +109,22 @@ nnoremap <silent><leader>mm :set lines=10000 columns=1000<cr>
 nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 
 " ================ Plugin Configuraiton  ====================
+ 
+
+" -------------- gutentags  -----------------
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+
+" config project root markers.
+let g:gutentags_project_root = ['.root', '.git']
+
+" generate datebases in my cache directory, prevent gtags files polluting my project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
+
+let g:gutentags_define_advanced_commands = 1
+let g:gutentags_cscope_executable = 'gtags-cscope' 
 
 " -------------- YouCompleteMe  -----------------
 let g:ycm_always_populate_location_list            = 1

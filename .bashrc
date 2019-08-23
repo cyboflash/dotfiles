@@ -18,7 +18,8 @@ export PATH
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-export PS1="\[$txtylw\]\u\[$txtrst\]\[$bldwht\]@\[$txtrst\]\e[95m\h\[$txtrst\] \W\\n\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\[$bldwht\][\w]\\n\[$bldylw\]\u\[$bldwht\]@\[$bldpur\]\H\\n\[$bldcyn\]\$git_branch\[$bldred\]\$git_dirty\[$bldgrn\]\$\[$txtrst\] "
+# export PS1="\s \V\\$ "
 
 
 if [ -f ~/.bashrc_private ]; then

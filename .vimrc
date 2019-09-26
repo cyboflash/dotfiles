@@ -70,6 +70,9 @@ set number
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 retab
 
+" Do not highlight the foreground in the QuickFixList
+hi QuickFixLine ctermfg=none
+
 " Underline current cursor line
 set cursorline
 augroup CustomCursorLine

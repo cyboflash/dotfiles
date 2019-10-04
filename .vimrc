@@ -41,6 +41,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 " Plugin 'skywind3000/gutentags_plus'
 " Plugin 'w0rp/ale.git'
 Plugin 'brookhong/cscope.vim.git'
+Plugin 'Valloric/ListToggle.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,8 +83,6 @@ augroup CustomCursorLine
 augroup END
 
 
-nnoremap <leader>l :set list!<cr>
-
 nnoremap <silent><F8> :nohlsearch<cr>
 
 nnoremap <leader>vv :vsp<cr>
@@ -111,6 +110,24 @@ nnoremap <silent><M-F10>    :clast<cr>
 nnoremap <silent><leader>mm :set lines=10000 columns=1000<cr>
 nnoremap <silent><leader>mn :set lines=999 columns=90<cr>
 
+" -------------- cscope -----------------
+" Interactive search
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+" s: Find this C symbol
+nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+
 " ================ Plugin Configuraiton  ====================
  
 
@@ -130,7 +147,7 @@ let g:gutentags_define_advanced_commands = 1
 let g:gutentags_cscope_executable = 'gtags-cscope' 
 
 " -------------- YouCompleteMe  -----------------
-let g:ycm_always_populate_location_list            = 1
+let g:ycm_always_populate_location_list            = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_error_symbol                             = 'E>'
 let g:ycm_warning_symbol                           = 'W>'

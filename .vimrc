@@ -40,7 +40,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 " Plugin 'ludovicchabant/vim-gutentags'
 " Plugin 'skywind3000/gutentags_plus'
 " Plugin 'w0rp/ale.git'
-
+Plugin 'brookhong/cscope.vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

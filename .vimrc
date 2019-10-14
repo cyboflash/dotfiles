@@ -129,7 +129,8 @@ nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
 nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 " ================ Plugin Configuraiton  ====================
- 
+" ---------------Ctrl-P --------------------
+let g:ctrlp_dotfiles = 1
 
 " -------------- gutentags  -----------------
 let g:gutentags_modules = ['ctags', 'gtags_cscope']
@@ -152,6 +153,9 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_error_symbol                             = 'E>'
 let g:ycm_warning_symbol                           = 'W>'
 let g:ycm_confirm_extra_conf                       = 0
+let g:ycm_show_diagnostic_ui                       = 0
+let g:ycm_enable_diagnostic_signs                  = 0
+let g:ycm_enable_diagnostic_highlighting           = 0
 
 " -------------- lightline  -----------------
 

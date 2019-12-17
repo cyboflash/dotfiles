@@ -48,6 +48,10 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
+" When a file has been detected to have been changed outside of Vim and
+" 	it has not been changed inside of Vim, automatically read it again.
+set autoread
+
 " Use the appropriate number of spaces to insert a
 " 	<Tab>.
 set expandtab

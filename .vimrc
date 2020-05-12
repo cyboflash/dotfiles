@@ -42,6 +42,7 @@ Plugin 'rafi/awesome-vim-colorschemes'
 " Plugin 'w0rp/ale.git'
 Plugin 'brookhong/cscope.vim.git'
 Plugin 'Valloric/ListToggle.git'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,6 +80,9 @@ set relativenumber
 set number
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 retab
+
+" set spell check language to US English
+set spelllang=en_us
 
 " Do not highlight the foreground in the QuickFixList
 hi QuickFixLine ctermfg=none
